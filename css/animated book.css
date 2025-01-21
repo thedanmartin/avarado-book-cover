@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transform: translate(-50%,-50%);
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+  background-color: black;
+  border: 2px solid #fff;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: flex-end;
+  gap: 60px; 
+
+}
+
+.disappear {
+  font-family: DeathFont;
+  position: absolute;
+  top: 21.5%;
+  left: 49%;
+  transform: translateX(-50%);
+  font-size: 55px;
+  z-index: 10;
+  color: transparent; /* Set text color to transparent */
+  letter-spacing: -11px;
+  white-space: nowrap; 
+}
+.disappear:hover {
+  filter: invert(100%);
+}
+
+.title-letter {
+  display: inline-block;
+  opacity: 0; 
+  text-shadow:
+  -3px -3px 0 black,  
+  3px -3px 0 black,
+  -3px 3px 0 black,
+  3px 3px 0 black;
+  color: white; /* Set text color to white */
+  transition: opacity 1.5s ease; /* Add transition for opacity */
+  z-index:8;
+}
+.title-letter:nth-child(1){
+  animation: disappearleft 1.5s forwards;
+}
+.title-letter:nth-child(2){
+  animation: disappearleft 1.5s forwards .3s;
+}
+.title-letter:nth-child(3){
+  animation: disappearight 1.5s forwards .6s;
+}
+.title-letter:nth-child(4){
+  animation: disappearleft 1.5s forwards .8s;
+}
+.title-letter:nth-child(5){
+  animation: disappearight 1.5s forwards 1s;
+}
+.title-letter:nth-child(6){
+  animation: disappearight 1.5s forwards 1.3s;
+}
+.title-letter:nth-child(7){
+  animation: disappearleft 1.5s forwards 1.6s;
+}
+.title-letter:nth-child(8){
+  animation: disappearight 1.5s forwards 2s;
+}
+.title-letter:nth-child(9){
+  animation: disappearight 1.5s forwards 2.3s;
+}
+
+@keyframes disappearleft{
+  100% {
+    transform: skew(0deg) translateY(0);
+    text-shadow:
+    -3px -3px 0 black,  
+    3px -3px 0 black,
+    -3px 3px 0 black,
+    3px 3px 0 black;
+        opacity: 1;
+  }
+}
+@keyframes disappearight{
+  100% {
+    transform: skew(0deg) translateY(0);
+    text-shadow:
+    -3px -3px 0 black,  
+    3px -3px 0 black,
+    -3px 3px 0 black,
+    3px 3px 0 black;
+        opacity: 1;
+  }
+}
+@font-face {
+  font-family: DeathFont;
+  src: url('/Volumes/TRACY/SHORT BOOK COVER/TLE Death Note Fonts/death_font_ver1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: CloisterBlack;
+  src: url('/Volumes/TRACY/SHORT BOOK COVER/TLE Death Note Fonts/CloisterBlack copy.ttf') format('truetype');
+}
+
+.scrolling_text {
+  font-family: CloisterBlack;
+  color: grey;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: flex-end;
+  writing-mode: vertical-lr;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  z-index: 1; 
+
+}
+
+.scrolling_text > div {
+  margin-bottom: 5px; 
+}
+
+.scrolling_text_1,
+.scrolling_text_3,
+.scrolling_text_5 {
+  animation: scrollDown 100s linear infinite;
+}
+
+.scrolling_text_2,
+.scrolling_text_4 {
+  animation: scrollUp 30s linear infinite; 
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-100%); /* Start from the top */
+  }
+  50% {
+    transform: translateY(0); /* Scroll down to the middle */
+  }
+  100% {
+    transform: translateY(100%); /* Scroll down to the bottom */
+  }
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0); /* Start from the bottom */
+  }
+  50% {
+    transform: translateY(100); /* Scroll up to the middle */
+  }
+  100% {
+    transform: translateY(-100%); /* Scroll up to the top */
+  }
+}
+
+.scrolling_text:nth-child(2) {
+  top: 100%; 
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+}
+
+.image-style {
+  z-index: 2; 
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  top: 0px;
+  left: -4px;
+  opacity: 99%;
+}
+
+.second-image {
+  z-index: 6;
+  width: 400px;
+  height: 600px;
+  top: 23px;
+  left: 20px;
+}
+.second-image:hover {
+  filter: brightness(1) hue-rotate(90deg); /* Adjust the hue-rotate angle */
+}
+
+.third-image {
+  z-index: 7; 
+  width: 400px;
+  height: 600px;
+  top: 23px;
+  left: 20px;
+}
+
+.third-image:hover {
+  filter: brightness(1) hue-rotate(45deg); /* Adjust the hue-rotate angle */
+}
+
+.fourth-image {
+  z-index: 5; 
+  width: 400px;
+  height: 600px;
+  top: 23px;
+  left: 20px;
+}
+.fourth-image:hover {
+  filter: brightness(1) hue-rotate(180deg); /* Adjust the hue-rotate angle */
+}
+
+
+.fifth-image {
+  z-index:4;
+  width: 400px;
+  height: 600px;
+  top: 23px;
+  left: 20px;
+}
+.fifth-image:hover {
+  filter: brightness(1) hue-rotate(225deg); /* Adjust the hue-rotate angle */
+}
+
+
+.animated-text {
+  text-align: center;
+    position: absolute;
+    width: 200px;
+    z-index: 10; /* Ensure the text appears above other elements */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.left {
+  left: 10px;
+  text-align:left;
+  bottom:30px;
+}
+
+.right {
+  right: 10px;
+  text-align: right;
+  bottom:30px;
+
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInFirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the first image */
+.first-image {
+  animation: fadeInFirst 1.5s ease forwards;
+}
+
+/* Fade-in animation for second image */
+@keyframes fadeInSecond {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the second image */
+.second-image {
+  animation: fadeInSecond 1.5s ease forwards;
+}
+
+/* Fade-in animation for third image */
+@keyframes fadeInThird {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the third image */
+.third-image {
+  animation: fadeInThird 1.5s ease forwards;
+}
+
+/* Fade-in animation for fourth image */
+@keyframes fadeInFourth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the fourth image */
+.fourth-image {
+  animation: fadeInFourth 1.5s ease forwards;
+}
+
+/* Fade-in animation for fifth image */
+@keyframes fadeInFifth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to the fifth image */
+.fifth-image {
+  animation: fadeInFifth 1.5s ease forwards;
+}
