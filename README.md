@@ -1,0 +1,1 @@
+# avarado-book-cover
